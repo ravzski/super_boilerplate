@@ -1,12 +1,15 @@
 ion-content
-  .row
-    .col
-      .panel
-        .panel-body
-          label.item.item-input
-            input(type='text', placeholder='Username/Email')
-          label.item.item-input
-            input(type='text', placeholder='Password')
-
-          button.button.button-block.button-positive(ng-click="login()")
-            | Login
+  .condensed.centered
+    .list
+      label.item.item-input.item-floating-label
+        span.input-label Email
+        input(type='text', placeholder='Email'  ng-model="credentials.email")
+      label.item.item-input.item-floating-label
+        span.input-label Password
+        input(type='password', placeholder='password' ng-model="credentials.password")
+      
+      .form-actions.pushed-top
+        a.button.button-block.button-positive(ng-click="login()")
+          | Login
+        a.button.button-block.button-positive(href="/#/register")
+          | Register

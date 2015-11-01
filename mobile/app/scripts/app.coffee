@@ -10,7 +10,9 @@ angular.module(
 
 
 angular.module('client')
-  .config ($stateProvider, $urlRouterProvider)->
+  .config ($stateProvider, $urlRouterProvider,$locationProvider)->
+    # $locationProvider.html5Mode(true)
+
     #
     # $stateProvider.state 'home',
     #   url:         '/home'
@@ -22,6 +24,10 @@ angular.module('client')
       controller:  'LoginCtrl'
       templateUrl: 'views/login/template.html'
 
+    $stateProvider.state 'register',
+      url:         '/register'
+      controller:  'RegisterCtrl'
+      templateUrl: 'views/register/template.html'
 
     # TODO: create an error page that captures the details
     #       of the errors and submits them to us for debugging

@@ -1,0 +1,18 @@
+ion-content
+  .condensed.centered
+    .list
+      label.item.item-input.item-floating-label
+        span.input-label First Name
+        input(type='text', placeholder='First Name')
+      label.item.item-input.item-floating-label
+        span.input-label Last Name
+        input(type='text', placeholder='Last Name')
+      label.item.item-input.item-floating-label
+        span.input-label Email
+        input(type='text', placeholder='Email')
+
+      .form-actions.pushed-top
+        a.button.button-block.button-positive(ng-click="register()")
+          | Register
+        a.button.button-block.button-positive(href="/#/login")
+          | Login
