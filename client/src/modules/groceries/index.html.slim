@@ -1,0 +1,10 @@
+page-header title="Groceries"
+
+.page-wrap ng-if="!!grocery"
+  .row
+    .col-md-8
+      grocery-search
+      grocery-list
+    .col-md-4
+      reminders collection="reminders"
+      grocery-summary

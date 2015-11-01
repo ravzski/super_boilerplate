@@ -1,0 +1,11 @@
+.panel
+  .panel-heading
+    | Summary
+
+    a.btn.btn-export.pull-right ng-csv="getGroceryArray()" filename="{{ csvFileName }}" csv-header="csvHeaders"
+      | Export to CSV
+
+  .panel-body
+    span Total:
+    strong ng-bind="' '+grocery.overall_total.formatMoney()"
+  .panel-body

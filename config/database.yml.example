@@ -1,0 +1,27 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: super_boilerplate_dev
+  pool: 5
+  username: postgres
+  password: admin
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: super_boilerplate_test
+  pool: 5
+  username: postgres
+  password: admin
+  host: localhost
+
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: super_boilerplate_dev
+  pool: 5
+  username: postgres
+  password: admin
+  host: localhost
