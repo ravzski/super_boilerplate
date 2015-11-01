@@ -1,16 +1,13 @@
 (function() {
-  angular.module('client', ['ionic']).config(function($stateProvider, $urlRouterProvider) {
-    $stateProvider.state('home', {
-      url: '/home',
-      controller: 'HomeCtrl',
-      templateUrl: 'views/home/template.html'
-    });
+  angular.module('client', ['ionic', 'ngSanitize', 'ui.router', 'ngResource']);
+
+  angular.module('client').config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('login', {
       url: '/login',
       controller: 'LoginCtrl',
       templateUrl: 'views/login/template.html'
     });
-    return $urlRouterProvider.otherwise('/home');
+    return $urlRouterProvider.otherwise('/login');
   }).run(function($ionicPlatform) {
     return $ionicPlatform.ready(function() {
       var ref, ref1;

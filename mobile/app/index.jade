@@ -13,12 +13,17 @@ html
 
     // ionic/angularjs js
     script(src='lib/ionic/js/ionic.bundle.js')
-
+    script(src='lib/angular-resource/angular-resource.min.js')
+      
     // cordova script (this will be a 404 during development)
     script(src='cordova.js')
 
     // app js and css
+    script(src='views/properties/constants.js')
     script(src='scripts/app.js')
+    script(src='views/services/session.js')
+    script(src='views/services/user.js')
+
     script(src='views/home/module.js')
     script(src='views/login/module.js')
 

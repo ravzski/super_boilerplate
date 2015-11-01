@@ -1,10 +1,21 @@
-angular.module('client', ['ionic'])
-  .config ($stateProvider, $urlRouterProvider)->
+angular.module(
+  'client',
+  [
+    'ionic',
+    'ngSanitize',
+    'ui.router',
+    'ngResource'
+  ]
+)
 
-    $stateProvider.state 'home',
-      url:         '/home'
-      controller:  'HomeCtrl'
-      templateUrl: 'views/home/template.html'
+
+angular.module('client')
+  .config ($stateProvider, $urlRouterProvider)->
+    #
+    # $stateProvider.state 'home',
+    #   url:         '/home'
+    #   controller:  'HomeCtrl'
+    #   templateUrl: 'views/home/template.html'
 
     $stateProvider.state 'login',
       url:         '/login'
@@ -14,7 +25,7 @@ angular.module('client', ['ionic'])
 
     # TODO: create an error page that captures the details
     #       of the errors and submits them to us for debugging
-    $urlRouterProvider.otherwise('/home')
+    $urlRouterProvider.otherwise('/login')
 
   .run ($ionicPlatform)->
 
