@@ -2,11 +2,11 @@
 
 This repo contains boilerplate or app skeleton based on the ff stack:
 
-* Rails (as an API)
+* Rails (as an API ONLY)
 
-* Client (angular, bower)
+* Client (angular, bower, assets pipeline)
 
-* Mobile (ionic, angular)
+* Mobile (ionic, angular, gulp)
 
 
 == Rails
@@ -23,4 +23,5 @@ will add doc soon
 
 
 from sourcepad with love
+
 still a WIP, send PR to improve this boilerplate
