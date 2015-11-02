@@ -20,3 +20,7 @@ will add doc soon
 == Mobile
 
 will add doc soon
+
+
+from sourcepad with love
+still a WIP, send PR to improve this boilerplate
