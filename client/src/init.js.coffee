@@ -12,22 +12,6 @@ angular.module(
     'DatePicker',
     'ActiveSelect',
     'NgActive',
-    'Sidebar',
-    'Logs',
-    'ToggableField',
-    'Header',
-    'PageHeader',
-    'ProductList',
-    'ProductModal',
-    'ProductStatus',
-    'satellizer'
-    'CategoryList',
-    'CategoryModal',
-    'Reminders',
-    'GrocerySearch',
-    'GroceryList',
-    'GroceryForms',
-    'GrocerySummary',
-    'ngCsv'
+    'Sidebar'
   ]
 )

@@ -12,9 +12,17 @@ module Authenticable
     #
     def find_by_request_details request_details
       select("users.*, access_tokens.token current_token, access_tokens.id as current_access_token_id").
-      joins(:access_token).
+      joins(:access_tokens).
       where("users.id = ?", request_details[:user_id]).
       where("access_tokens.token = ?", request_details[:access_token])
+    end
+
+    #
+    # Finds a user given email and password
+    #
+    def find_by_credentials(creds)
+      user = self.find_by_email(creds[:email])
+      user if user.present? && user.valid_password?(creds[:password])
     end
 
   end

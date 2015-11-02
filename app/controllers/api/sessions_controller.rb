@@ -1,4 +1,4 @@
-class Api::V1::SessionsController < ApiController
+class Api::SessionsController < ApiController
 
   skip_before_action :authenticate_request, only: :create
   before_action :find_user, only: :create
@@ -12,8 +12,8 @@ class Api::V1::SessionsController < ApiController
   end
 
   def create
-    if user.present? && user.set_access_token
-      render json: Sessions::Builder.new(user).create
+    if @user.present? && @user.set_access_token
+      render json: Sessions::Builder.new(@user).create
     else
       render json: Sessions::Builder.error, status: :unauthorized
     end
@@ -30,7 +30,7 @@ class Api::V1::SessionsController < ApiController
   private
 
   def find_user
-    user = User.find_by_credentials(params[:credentials])
+    @user = User.find_by_credentials(params[:credentials])
   end
 
 end

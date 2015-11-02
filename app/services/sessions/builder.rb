@@ -1,8 +1,8 @@
 module Sessions
   class Builder
 
-    def initialize current_@current_user
-      @current_@current_user = current_@current_user
+    def initialize current_user
+      @current_user = current_user
     end
 
     def self.error
@@ -16,10 +16,10 @@ module Sessions
     #
     def show
       {
-        id: @current_@current_user.id,
-        first_name: @current_@current_user.first_name,
-        last_name: @current_@current_user.last_name,
-        email: @current_@current_user.email
+        id: @current_user.id,
+        first_name: @current_user.first_name,
+        last_name: @current_user.last_name,
+        email: @current_user.email
       }
     end
 

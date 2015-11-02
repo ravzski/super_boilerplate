@@ -7,4 +7,6 @@ class ApiController < ActionController::Base
   # methods here can be found in authenticator
   before_action :authenticate_request
 
+
+
 end
