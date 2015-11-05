@@ -1,12 +1,13 @@
 .item-floating-label {
   border: 0px;
-  border-bottom: 1px solid #FE6263;
+  border-bottom: 1px solid #2A8EFE;
 }
+
 
 
 .form-actions {
   &.pushed-top {
-    margin-top: 20%;
+    margin-top: 40px;
   }
   .buttons {
     margin-bottom: 20px;
@@ -14,5 +15,5 @@
 }
 
 .input-label {
-  color: #FE6263;
+  color: #2A8EFE;
 }

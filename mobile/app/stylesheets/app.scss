@@ -4,7 +4,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Custom color pallet
 $light:     #fff !default;
 $stable:    #f8f8f8 !default;
-$positive:  #FE6263 !default;
+$positive:  #2A8EFE !default;
 $calm:      #11c1f3 !default;
 $balanced:  #33cd5f !default;
 $energized: #ffc900 !default;
@@ -19,3 +19,42 @@ $blue:      #00B4CF !default;
 @import "reset";
 @import "panel";
 @import "forms";
+@import "buttons";
+
+
+
+body {
+  color:  #717171;
+  background: #f1f2f7;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 13px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+
+a {
+  color: $positive;
+}
+
+
+.sign-up-ad {
+  font-size: 12px;
+  text-align: center;
+    margin-top: 30px;
+}
+
+label {
+  color: $positive;
+}
+
+
+.title {
+    text-align: center;
+    font-size: 34px;
+    padding: 70px 50px;
+    color: $positive;
+}
