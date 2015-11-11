@@ -41,11 +41,23 @@ angular.module('client')
       templateUrl: 'views/register/template.html'
 
 
-    $stateProvider.state 'graphs',
+    $stateProvider.state 'radar',
       cache: false
-      url:         '/graphs'
+      url:         '/radar'
       controller:  'GraphsCtrl'
-      templateUrl: 'views/graphs/template.html'
+      templateUrl: 'views/graphs/radar.html'
+
+    $stateProvider.state 'core',
+      cache: false
+      url:         '/core'
+      controller:  'GraphsCtrl'
+      templateUrl: 'views/graphs/core.html'
+
+    $stateProvider.state 'environment',
+      cache: false
+      url:         '/environment'
+      controller:  'GraphsCtrl'
+      templateUrl: 'views/graphs/environment.html'
 
     # TODO: create an error page that captures the details
     #       of the errors and submits them to us for debugging

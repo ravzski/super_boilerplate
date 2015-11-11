@@ -1,15 +1,23 @@
 angular.module('client')
   .controller 'GraphsCtrl', ($scope)->
 
+    $scope.currentChart = 1
+
+    $scope.toggleCurrent=(current)->
+      $scope.currentChart = current
+
     radarChartData =
       labels: [
-        'Eating'
-        'Drinking'
-        'Sleeping'
-        'Designing'
-        'Coding'
-        'Cycling'
-        'Running'
+        'Health'
+        'Exercise'
+        'Relationships'
+        'Home Environment'
+        'Play'
+        'Money'
+        'Work'
+        'Life Purpose'
+        'Spirituality'
+        'Self Esteem'
       ]
       datasets: [
         {
@@ -50,4 +58,52 @@ angular.module('client')
         }
       ]
 
-    window.myRadar = new Chart(document.getElementById('radar').getContext('2d')).Radar(radarChartData)
+
+    coreData =
+      labels: [
+        'Certainty'
+        'Variety'
+        'Connection'
+        'Significance'
+      ]
+      datasets: [
+        {
+          label: 'My First dataset'
+          fillColor: 'rgba(220,220,220,0.5)'
+          strokeColor: 'rgba(220,220,220,0.8)'
+          highlightFill: 'rgba(220,220,220,0.75)'
+          highlightStroke: 'rgba(220,220,220,1)'
+          data: [
+            40
+            50
+            10
+            40
+          ]
+        }
+      ]
+
+    envData =
+      labels: [
+        'Personal'
+        'Social'
+        'Work'
+      ]
+      datasets: [
+        {
+          label: 'My First dataset'
+          fillColor: 'rgba(220,220,220,0.5)'
+          strokeColor: 'rgba(220,220,220,0.8)'
+          highlightFill: 'rgba(220,220,220,0.75)'
+          highlightStroke: 'rgba(220,220,220,1)'
+          data: [
+            40
+            50
+            10
+          ]
+        }
+      ]
+
+
+    myRadar = new Chart(document.getElementById('radar').getContext('2d')).Radar(radarChartData)
+    bar = new Chart(document.getElementById('core').getContext('2d')).Bar(coreData)
+    bar = new Chart(document.getElementById('env').getContext('2d')).Bar(envData)

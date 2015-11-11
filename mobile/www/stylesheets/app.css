@@ -7732,8 +7732,18 @@ label {
   width: 100%;
   padding: 30px;
   margin-top: 45px; }
+  .chart-container.full {
+    padding: 20px 20px 0px 20px; }
 
 #radar {
+  width: 100%;
+  height: auto; }
+
+#core {
+  width: 100%;
+  height: auto; }
+
+#env {
   width: 100%;
   height: auto; }
 

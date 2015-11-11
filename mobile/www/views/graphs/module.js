@@ -1,8 +1,12 @@
 (function() {
   angular.module('client').controller('GraphsCtrl', function($scope) {
-    var radarChartData;
+    var bar, coreData, envData, myRadar, radarChartData;
+    $scope.currentChart = 1;
+    $scope.toggleCurrent = function(current) {
+      return $scope.currentChart = current;
+    };
     radarChartData = {
-      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+      labels: ['Health', 'Exercise', 'Relationships', 'Home Environment', 'Play', 'Money', 'Work', 'Life Purpose', 'Spirituality', 'Self Esteem'],
       datasets: [
         {
           label: 'My First dataset',
@@ -25,7 +29,35 @@
         }
       ]
     };
-    return window.myRadar = new Chart(document.getElementById('radar').getContext('2d')).Radar(radarChartData);
+    coreData = {
+      labels: ['Certainty', 'Variety', 'Connection', 'Significance'],
+      datasets: [
+        {
+          label: 'My First dataset',
+          fillColor: 'rgba(220,220,220,0.5)',
+          strokeColor: 'rgba(220,220,220,0.8)',
+          highlightFill: 'rgba(220,220,220,0.75)',
+          highlightStroke: 'rgba(220,220,220,1)',
+          data: [40, 50, 10, 40]
+        }
+      ]
+    };
+    envData = {
+      labels: ['Personal', 'Social', 'Work'],
+      datasets: [
+        {
+          label: 'My First dataset',
+          fillColor: 'rgba(220,220,220,0.5)',
+          strokeColor: 'rgba(220,220,220,0.8)',
+          highlightFill: 'rgba(220,220,220,0.75)',
+          highlightStroke: 'rgba(220,220,220,1)',
+          data: [40, 50, 10]
+        }
+      ]
+    };
+    myRadar = new Chart(document.getElementById('radar').getContext('2d')).Radar(radarChartData);
+    bar = new Chart(document.getElementById('core').getContext('2d')).Bar(coreData);
+    return bar = new Chart(document.getElementById('env').getContext('2d')).Bar(envData);
   });
 
 }).call(this);

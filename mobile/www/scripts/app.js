@@ -28,11 +28,23 @@
       controller: 'RegisterCtrl',
       templateUrl: 'views/register/template.html'
     });
-    $stateProvider.state('graphs', {
+    $stateProvider.state('radar', {
       cache: false,
-      url: '/graphs',
+      url: '/radar',
       controller: 'GraphsCtrl',
-      templateUrl: 'views/graphs/template.html'
+      templateUrl: 'views/graphs/radar.html'
+    });
+    $stateProvider.state('core', {
+      cache: false,
+      url: '/core',
+      controller: 'GraphsCtrl',
+      templateUrl: 'views/graphs/core.html'
+    });
+    $stateProvider.state('environment', {
+      cache: false,
+      url: '/environment',
+      controller: 'GraphsCtrl',
+      templateUrl: 'views/graphs/environment.html'
     });
     return $urlRouterProvider.otherwise('/login');
   }).run(function($ionicPlatform) {

@@ -167,9 +167,12 @@ text-align: center;
 
 .chart-container{
 
-    width: 100%;
-    padding: 30px;
-    margin-top: 45px;
+  width: 100%;
+  padding: 30px;
+  margin-top: 45px;
+  &.full{
+    padding: 20px 20px 0px 20px;
+  }
 }
 
 #radar{
@@ -177,6 +180,15 @@ text-align: center;
     height: auto;
 }
 
+#core{
+    width: 100%;
+    height: auto;
+}
+
+#env{
+    width: 100%;
+    height: auto;
+}
 .start-container{
   padding: 20px;
 }
