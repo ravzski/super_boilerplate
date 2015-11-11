@@ -4,7 +4,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Custom color pallet
 $light:     #fff !default;
 $stable:    #f8f8f8 !default;
-$positive:  #2A8EFE !default;
+$positive:  #3DB6FD !default;
 $calm:      #11c1f3 !default;
 $balanced:  #33cd5f !default;
 $energized: #ffc900 !default;
@@ -38,6 +38,7 @@ body {
 
 a {
   color: $positive;
+  text-decoration: none;
 }
 
 
@@ -52,9 +53,147 @@ label {
 }
 
 
-.title {
+.page-title {
     text-align: center;
     font-size: 34px;
     padding: 70px 50px;
     color: $positive;
 }
+
+
+
+.tab-item{
+  max-width: 100%;
+}
+
+
+.exam-title {
+    padding: 2px 30px;
+    text-align: center;
+}
+
+.info-box{
+    padding: 20px;
+    border: 1px solid #3DB6FD;
+    margin: 30px;
+    border-radius: 3px;
+    margin-top: 160px;
+}
+
+.question-content{
+  color: #333;
+  margin-top: 45px;
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+.question {
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-bottom: 15px;
+  padding: 5px 10px;
+}
+
+.grey {
+      background-color: #EAEAEA;
+}
+
+.question-choices{
+  background-color: #fff;
+  font-size: 13px;
+  border-radius: 3px;
+  ul{
+    li{
+      font-size: 16px;
+      border-bottom: 1px solid #E6E6E6;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+
+  a{
+    text-decoration: none;
+    padding: 13px 8px;
+        display: block;
+    i {
+      margin-right: 8px;
+    }
+  }
+
+  li.chosen{
+    background-color: #6FCAFF;
+    a{
+      color: #fff;
+    }
+  }
+}
+
+
+.bar.bar-positive .title {
+  left: 0px !important;
+  right: 0px !important;
+}
+
+.main-title{
+text-align: center;
+    padding: 0px 20px;
+    margin-top: 90px !important;
+    color: $positive;
+    font-size: 34px
+}
+
+
+.grey-bg{
+  background-color: #F5F5F5
+}
+
+.button{
+  line-height: 46px;
+  border: 0px;
+}
+
+.alert-danger{
+  background-color: $assertive;
+  color: $light;
+  padding: 10px;
+  border-radius: 2px;
+  text-align: center;
+    margin-bottom: 10px;
+}
+
+.chart-container{
+
+    width: 100%;
+    padding: 30px;
+    margin-top: 45px;
+}
+
+#radar{
+    width: 100%;
+    height: auto;
+}
+
+.start-container{
+  padding: 20px;
+}
+
+.text-center{
+  text-align: center;
+}
+//
+// .bar.bar-positive{
+//   max-height: 44px;
+//   text-align: center;
+//   display: block;
+//   h3{
+//     color: $light;
+//     margin: 0px;
+//     line-height: 32px;
+//     font-size: 22px;
+//   }
+//
+// }

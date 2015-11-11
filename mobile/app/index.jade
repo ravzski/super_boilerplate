@@ -14,6 +14,7 @@ html
 
     // ionic/angularjs js
     script(src='lib/ionic/js/ionic.bundle.js')
+    script(src='lib/Chart.js/Chart.min.js')
     script(src='lib/angular-resource/angular-resource.min.js')
       
     // cordova script (this will be a 404 during development)
@@ -28,7 +29,10 @@ html
     script(src='views/home/module.js')
     script(src='views/login/module.js')
     script(src='views/register/module.js')
-
+    script(src='views/exams/module.js')
+    script(src='views/start/module.js')
+    script(src='views/graphs/module.js')    
+    
   body(ng-app='client')
     //- ion-nav-bar.bar-positive
     //-   ion-nav-back-button.button-clear

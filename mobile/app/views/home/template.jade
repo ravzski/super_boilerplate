@@ -1,4 +1,15 @@
-ion-view(title="Home" hide-back-button="true")
-  ion-content
-    h1 {{content.heading}}
-    p {{content.tagline}}
+
+.bar.bar-header.bar-positive
+  h1.page-title Home
+      
+ion-view.grey
+
+  .tabs-striped.tabs-color-positive
+    .tabs
+      a.tab-item(href="/login")
+        i.icon.ion-home
+        |         Test
+
+      a.tab-item.active(href='/exams'.active)
+        i.icon.ion-arrow-graph-up-right
+        |         Settings

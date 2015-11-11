@@ -1,0 +1,53 @@
+ion-header-bar(class="bar-positive")
+  h1.title Assessment
+    
+.bar.bar-subheader
+  h2.title(ng-bind="currentHeading")
+
+ion-content.grey-bg(has-header="true" ng-init="reset()")
+  .question-content
+    
+    .alert.alert-danger(ng-if="showWarning") You have to choose at least one
+    div(ng-repeat="obj in questions")
+      div(ng-if="currentQuestion==obj.id")
+        p.question(ng-bind="obj.content")
+          
+        .question-choices
+          ul.choices
+            li(ng-class="{'chosen': obj.answer == 1}")
+              a(ng-click="setAnswer(obj,1)")
+                i(ng-class="obj.answer ==1 ? 'ion-checkmark-circled' : 'ion-ios-checkmark-outline'")
+                span Never
+            li(ng-class="{'chosen': obj.answer == 2}")
+              a(ng-click="setAnswer(obj,2)")
+                i(ng-class="obj.answer ==2 ? 'ion-checkmark-circled' : 'ion-ios-checkmark-outline'")
+                span Rarely
+            li(ng-class="{'chosen': obj.answer == 3}")
+              a(ng-click="setAnswer(obj,3)")
+                i(ng-class="obj.answer ==3 ? 'ion-checkmark-circled' : 'ion-ios-checkmark-outline'")
+                span Sometimes
+            li(ng-class="{'chosen': obj.answer == 4}")
+              a(ng-click="setAnswer(obj,4)")
+                i(ng-class="obj.answer ==4 ? 'ion-checkmark-circled' : 'ion-ios-checkmark-outline'")
+                span Often
+            li(ng-class="{'chosen': obj.answer == 5}")
+              a(ng-click="setAnswer(obj,5)")
+                i(ng-class="obj.answer ==5 ? 'ion-checkmark-circled' : 'ion-ios-checkmark-outline'")
+                span Always
+
+            li(ng-class="{'chosen': obj.answer == 6}")
+              a(ng-click="setAnswer(obj,6)")
+                i(ng-class="obj.answer ==6? 'ion-checkmark-circled' : 'ion-ios-checkmark-outline'")
+                span N/A
+                
+        .row(ng-if="obj.id == 1")
+          .col
+            a.button.button-block.button-positive(href="#/exams") Back
+          .col
+            a.button.button-block.button-positive(ng-click="next(obj)") Next
+
+        .row(ng-if="obj.id == 2")
+          .col
+            a.button.button-block.button-positive(ng-click="back(obj)") Back
+          .col
+            a.button.button-block.button-positive(a href="#/graphs") Finish

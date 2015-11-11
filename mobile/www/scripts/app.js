@@ -2,6 +2,22 @@
   angular.module('client', ['ionic', 'ngSanitize', 'ui.router', 'ngResource']);
 
   angular.module('client').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    $stateProvider.state('exams', {
+      url: '/exams',
+      controller: 'ExamsCtrl',
+      templateUrl: 'views/exams/template.html'
+    });
+    $stateProvider.state('start', {
+      cache: false,
+      url: '/start',
+      controller: 'StartCtrl',
+      templateUrl: 'views/start/template.html'
+    });
+    $stateProvider.state('home', {
+      url: '/home',
+      controller: 'HomeCtrl',
+      templateUrl: 'views/home/template.html'
+    });
     $stateProvider.state('login', {
       url: '/login',
       controller: 'LoginCtrl',
@@ -11,6 +27,12 @@
       url: '/register',
       controller: 'RegisterCtrl',
       templateUrl: 'views/register/template.html'
+    });
+    $stateProvider.state('graphs', {
+      cache: false,
+      url: '/graphs',
+      controller: 'GraphsCtrl',
+      templateUrl: 'views/graphs/template.html'
     });
     return $urlRouterProvider.otherwise('/login');
   }).run(function($ionicPlatform) {

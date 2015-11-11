@@ -1,0 +1,31 @@
+ion-header-bar(class="bar-positive")
+  h1.title Assessment
+
+.tabs-striped.tabs-color-positive.tabs-top.tabs-icon-top
+  .tabs
+    a.tab-item.active(href="/login")
+      i.ion-android-wifi.icon
+      span Well Being
+
+    a.tab-item(href='/exams')
+      i.icon.ion-arrow-graph-up-right
+      span Core
+    a.tab-item(href='/exams')
+      i.ion-ios-pie-outline.icon
+      span Environment
+
+ion-content(has-header="true")
+  .chart-container
+    canvas#radar(height="450" width="450")
+
+  .start-container.text-center
+    a.button.button-block.button-positive(href="#/start") Take Another Exam
+
+.tabs-striped.tabs-color-positive
+  .tabs
+    a.tab-item(href="#/login")
+      i.ion-log-in.icon
+
+
+    a.tab-item.active(href='#/exams')
+      i.icon.ion-arrow-graph-up-right

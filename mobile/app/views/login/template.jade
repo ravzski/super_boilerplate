@@ -1,5 +1,5 @@
 ion-content
-  h1.title Personal Balance and Wellbeing
+  h1.main-title Personal Balance and Wellbeing
   .condensed
     .list
       label.item.item-input.item-floating-label
@@ -12,7 +12,13 @@ ion-content
       .form-actions.pushed-top
         a.button.button-block.button-positive(ng-click="login()")
           | Login
+
+        a.button.button-block.button-positive(a href="#/exams")
+          | Use Anonymous
         
+                
         p.sign-up-ad
           | Don't have an account? 
-          a(href="/register") Sign Up
+          a(href="#/register") Sign Up
+          br
+          a(href="#/register") Forgot Password
