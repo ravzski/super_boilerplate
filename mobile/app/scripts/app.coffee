@@ -4,7 +4,8 @@ angular.module(
     'ionic',
     'ngSanitize',
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'ngIOS9UIWebViewPatch'
   ]
 )
 

@@ -1,5 +1,5 @@
 (function() {
-  angular.module('client', ['ionic', 'ngSanitize', 'ui.router', 'ngResource']);
+  angular.module('client', ['ionic', 'ngSanitize', 'ui.router', 'ngResource', 'ngIOS9UIWebViewPatch']);
 
   angular.module('client').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider.state('exams', {
