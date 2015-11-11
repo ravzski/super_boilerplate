@@ -41,6 +41,7 @@ config/application.yml
 /mobile/node_modules
 /mobile/app/lib
 /mobile/platforms
+/mobile/www/lib
 
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
