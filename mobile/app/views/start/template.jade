@@ -4,7 +4,7 @@ ion-header-bar(class="bar-positive")
 .bar.bar-subheader
   h2.title(ng-bind="currentHeading")
 
-ion-content.grey-bg(has-header="true" ng-init="reset()")
+ion-content.grey-bg(class="has-header  has-subheader" ng-init="reset()")
   .question-content
     
     .alert.alert-danger(ng-if="showWarning") You have to choose at least one

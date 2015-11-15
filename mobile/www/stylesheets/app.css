@@ -7627,7 +7627,7 @@ a.button {
 body {
   color: #717171;
   background: #f1f2f7;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0px !important;
   margin: 0px !important;
   font-size: 13px;
@@ -7639,10 +7639,16 @@ a {
   color: #3DB6FD;
   text-decoration: none; }
 
+.exam-bg {
+  background: url('/images/sample.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
 .sign-up-ad {
   font-size: 12px;
   text-align: center;
-  margin-top: 30px; }
+  margin-top: 20px; }
 
 label {
   color: #3DB6FD; }
@@ -7662,14 +7668,11 @@ label {
 
 .info-box {
   padding: 20px;
-  border: 1px solid #3DB6FD;
-  margin: 30px;
-  border-radius: 3px;
-  margin-top: 160px; }
+  margin: 70px 30px 20px 30px;
+  border-radius: 3px; }
 
 .question-content {
   color: #333;
-  margin-top: 45px;
   width: 100%;
   padding: 20px; }
 
@@ -7717,7 +7720,8 @@ label {
   background-color: #F5F5F5; }
 
 .button {
-  line-height: 46px;
+  line-height: 40px;
+  min-height: 40px;
   border: 0px; }
 
 .alert-danger {
@@ -7730,8 +7734,7 @@ label {
 
 .chart-container {
   width: 100%;
-  padding: 30px;
-  margin-top: 45px; }
+  padding: 0px 10px; }
   .chart-container.full {
     padding: 20px 10px 0px 10px; }
 
@@ -7748,7 +7751,31 @@ label {
   height: auto; }
 
 .start-container {
-  padding: 20px; }
+  padding: 15px 20px; }
 
 .text-center {
   text-align: center; }
+
+.tabs-top > .tabs {
+  height: 60px; }
+
+.tabs-icon-top > .tabs .tab-item {
+  line-height: 24px; }
+
+.tab-item .icon {
+  position: relative;
+  top: 6px; }
+
+.panel {
+  border-radius: 2px;
+  background-color: #fff;
+  margin: 20px 20px 0px 20px; }
+  .panel .panel-body {
+    padding: 10px; }
+
+.charts-wrapper {
+  margin-top: 40px; }
+
+.chart-core {
+  padding-top: 20px;
+  margin-left: -20px; }

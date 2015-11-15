@@ -1,6 +1,6 @@
 (function() {
   angular.module('client').controller('GraphsCtrl', function($scope) {
-    var bar, coreData, envData, myRadar, radarChartData;
+    var bar, barOptions, coreData, envData, myRadar, radarChartData;
     $scope.currentChart = 1;
     $scope.toggleCurrent = function(current) {
       return $scope.currentChart = current;
@@ -55,9 +55,17 @@
         }
       ]
     };
+    barOptions = {
+      barShowStroke: true,
+      barValueSpacing: 10,
+      scaleOverride: true,
+      scaleSteps: 10,
+      scaleStepWidth: 10,
+      scaleStartValue: 0
+    };
     myRadar = new Chart(document.getElementById('radar').getContext('2d')).Radar(radarChartData);
-    bar = new Chart(document.getElementById('core').getContext('2d')).Bar(coreData);
-    return bar = new Chart(document.getElementById('env').getContext('2d')).Bar(envData);
+    bar = new Chart(document.getElementById('core').getContext('2d')).Bar(coreData, barOptions);
+    return bar = new Chart(document.getElementById('env').getContext('2d')).Bar(envData, barOptions);
   });
 
 }).call(this);

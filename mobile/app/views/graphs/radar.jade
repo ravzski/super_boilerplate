@@ -14,28 +14,41 @@ ion-header-bar(class="bar-positive")
       i.ion-ios-pie-outline.icon
       span Environment
 
-ion-content(has-header="true")
-
-  div(ng-show="currentChart == 1")
-    .chart-container
-      canvas#radar(height="450" width="450")
+ion-content.grey-bg(class="has-header  has-subheader")
   
-  div(ng-show="currentChart == 2")
-    .chart-container.full
-      canvas#core(height="450" width="450")
+  .charts-wrapper
+    div(ng-show="currentChart == 1")
+      .panel
+        .panel-body
+          .chart-container
+            canvas#radar(height="450" width="450")
+    
+    div(ng-show="currentChart == 2")
+      .panel
+        .panel-body
+          .chart-container.chart-core
+            canvas#core(height="450" width="450")
+          
+    div(ng-show="currentChart == 3")
+      .panel
+        .panel-body
+          .chart-container.full
+            canvas#env(height="450" width="450")
         
-  div(ng-show="currentChart == 3")
-    .chart-container.full
-      canvas#env(height="450" width="450")
-      
   .start-container.text-center
     a.button.button-block.button-positive(href="#/start") Take Another Exam
+    //- a.button.button-block.button-positive(href="#/login") Email Assessment
+    p.sign-up-ad
+      | Take it further 
+      a(href="#/register") Email this assessment
 
-.tabs-striped.tabs-color-positive
-  .tabs
-    a.tab-item(href="#/login")
-      i.ion-log-in.icon
-
-
-    a.tab-item.active(href='#/exams')
-      i.icon.ion-arrow-graph-up-right
+//- 
+//- .tabs-striped.tabs-color-positive
+//-   .tabs
+//-     a.tab-item.active(href='#/exams')
+//-       i.icon.ion-arrow-graph-up-right
+//- 
+//-     a.tab-item(href="#/login")
+//-       i.ion-log-in.icon
+//- 
+//-   

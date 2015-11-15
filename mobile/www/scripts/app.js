@@ -46,7 +46,7 @@
       controller: 'GraphsCtrl',
       templateUrl: 'views/graphs/environment.html'
     });
-    return $urlRouterProvider.otherwise('/login');
+    return $urlRouterProvider.otherwise('/exams');
   }).run(function($ionicPlatform) {
     return $ionicPlatform.ready(function() {
       var ref, ref1;

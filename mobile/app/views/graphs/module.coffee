@@ -103,7 +103,14 @@ angular.module('client')
         }
       ]
 
+    barOptions =
+      barShowStroke : true
+      barValueSpacing : 10
+      scaleOverride: true
+      scaleSteps: 10
+      scaleStepWidth: 10
+      scaleStartValue: 0
 
     myRadar = new Chart(document.getElementById('radar').getContext('2d')).Radar(radarChartData)
-    bar = new Chart(document.getElementById('core').getContext('2d')).Bar(coreData)
-    bar = new Chart(document.getElementById('env').getContext('2d')).Bar(envData)
+    bar = new Chart(document.getElementById('core').getContext('2d')).Bar(coreData,barOptions)
+    bar = new Chart(document.getElementById('env').getContext('2d')).Bar(envData,barOptions)

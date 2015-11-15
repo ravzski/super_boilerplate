@@ -62,7 +62,7 @@ angular.module('client')
 
     # TODO: create an error page that captures the details
     #       of the errors and submits them to us for debugging
-    $urlRouterProvider.otherwise('/login')
+    $urlRouterProvider.otherwise('/exams')
 
   .run ($ionicPlatform)->
 
